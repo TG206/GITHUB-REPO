@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://lucid.blog/tnzenwa/post/1566615432 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="csrf-token" content="nwJxorHWJLjDrbhyoogSmmov8yHToK2GByl98Rdp">
+    <!-- <title>Laravel</title> -->
+  <title>What I have done so far on Lucid based on HTML - thankgod nzenwa (@ tnzenwa)
+</title>
+  <link rel="short icon" type="image/png" sizes="16x16" href="https://lucid.blog/img/luci-logo.png">
+  <link rel="stylesheet" href="./Lucid Post_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="./Lucid Post_files/css" rel="stylesheet">
+  <link href="./Lucid Post_files/ionicons.min.css" rel="stylesheet">
+  <link href="./Lucid Post_files/style.css" rel="stylesheet">
+  <link href="./Lucid Post_files/main-style.css" rel="stylesheet">
+  <link href="./Lucid Post_files/tabletcss.css" rel="stylesheet">
+  <link href="./Lucid Post_files/quill.snow.css" rel="stylesheet">
+  <link rel="stylesheet" href="./Lucid Post_files/jquery-ui.min.css">
+  <link rel="stylesheet" href="./Lucid Post_files/bootstrap-tokenfield.min.css">
+  <style>
+    .preloader-wrapper {
+      display: none;
+    }
+
+    .preloader-active .preloader-wrapper {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      position: fixed;
+      color: #871e99;
+      opacity: 0.60;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+    }
+
+    .spinner {
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      border: 4px solid;
+      border-top-color: var(--main-color);
+      border-bottom-color: var(--main-color);
+      border-left-color: transparent;
+      border-right-color: transparent;
+      animation: rotate .5s infinite linear;
+      position: absolute;
+      top: 30%;
+      left: 42%;
+      transform: translateX(50%);
+
+    }
+
+    @keyframes  rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body id="preloader">
+  <div class="preloader-wrapper">
+    <div class="spinner"></div>
+  </div>
+  <section id="main-content" class="container pt-0">
+    <div class="row">
+
+            <!-- Beginning of Sidebar -->
+      <div class="col-10 col-sm-4 pb-0 mb-0 pt-2 d-none d-lg-block" id="sidebar">
+        <a class="d-lg-none" id="sidebarDismiss"><i class="icon ion-md-close-circle" style="font-size: 1.8em"></i></a>
+        <a href="https://lucid.blog/tnzenwa" class="changeHref"><img id="user-avatar" src="./Lucid Post_files/photo.jpg" class="img-fluid"></a>
+        <a href="https://lucid.blog/tnzenwa" class="no-decoration changeHref">
+          <h3 id="user-name" class="pt-2">thankgod nzenwa</h3>
+        </a>
+
+                <p id="user-bio" class="pb-2">
+          Tech enthusiast
+        </p>
+        
+
+        <div class="divider"></div>
+
+        <div class="sidebar-nav pt-2">
+          <ul>
+                        <li class="w-100 text-center"><a class=" changeHref" href="https://lucid.blog/tnzenwa">Posts</a></li>
+                        <li class="w-100 text-center"><a class=" changeHref" href="https://lucid.blog/tnzenwa/thoughts">Thoughts</a></li>
+            <!-- <li class="w-100 text-center"><a class=" changeHref" href="https://lucid.blog/under-construction">Videos</a></li> -->
+            <li class="w-100 text-center"><a class=" changeHref" href="https://lucid.blog/tnzenwa/contact">Contact</a></li>
+          </ul>
+        </div>
+                <!-- Follow Modal Trigger -->
+        <div class="follow-me text-center pt-3">
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#followModal">Follow Me</button>
+                  </div>
+        
+        <div class="user-stats text-center mt-3 pb-0">
+          <div class="d-inline-block">
+                        <a href="https://lucid.blog/tnzenwa/following" class="pr-2 changeHref">3 <br> <small class="text-muted">Following</small></a>
+                      </div>
+          <div class="d-inline-block">
+                        <a href="https://lucid.blog/tnzenwa/followers" class="changeHref">1 <br> <small class="text-muted">Followers</small></a>
+                      </div>
+          <div class="mt-3">
+            <a href="https://lucid.blog/"> <small class="text-muted"><img src="./Lucid Post_files/logo.jpg" alt="Lucid" class="img-fluid" style="filter: grayscale(100%); height: 20px;"> Powered by Lucid</small></a>
+          </div>
+        </div>
+      </div>
+      <!-- End of Sidebar -->
+
+      <!-- Unfollow Modal -->
+      <div class="modal fade text-center" id="unfollowModal" tabindex="-1" role="dialog" aria-labelledby="followModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+
+              <div>
+                <img src="./Lucid Post_files/photo.jpg" width="100" height="100" style="border-radius:100%;" class="img-fluid">
+                <br>
+                <br>
+                <h4 class="text-main">Unfollow thankgod nzenwa</h4>
+                <p class="small"><em>Are you sure you want to Unfollow thankgod nzenwa and miss out interesting post?<br> Click the button below to unfollow</em></p>
+                <form method="POST" action="https://lucid.blog/tnzenwa/unfollow">
+                  <input type="hidden" name="_token" value="nwJxorHWJLjDrbhyoogSmmov8yHToK2GByl98Rdp">                  <input type="hidden" name="rss" value="thankgod nzenwa">
+                  <button type="submit" class="btn btn-primary">UnFollow</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Unfollow Modal  -->
+
+      <!-- Follow Modal -->
+      <div class="modal fade text-center" id="followModal" tabindex="-1" role="dialog" aria-labelledby="followModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div>
+                <img src="./Lucid Post_files/photo.jpg" width="100" height="100" style="border-radius:100%;" class="img-fluid">
+                <br>
+                <br>
+                <h4 class="text-main">Follow thankgod nzenwa</h4>
+                <p class="small"><em>Do you have or would love to have Lucid installed on your domain?<br> Click the button below to follow me</em></p>
+                <form method="POST" action="https://lucid.blog/tnzenwa/addrss">
+                  <input type="hidden" name="_token" value="nwJxorHWJLjDrbhyoogSmmov8yHToK2GByl98Rdp">                  <input type="hidden" name="rss" value="tnzenwa">
+                  <button type="submit" class="btn btn-primary">Follow me on Lucid</button>
+                </form>
+              </div>
+              <div class="mt-5">
+                <span class="font-weight-bold mx-2">Follow Me On</span>
+                <a href="https://lucid.blog/tnzenwa/post/1566615432#" class="social-icon m-1"><i class="icon ion-logo-rss text-dark p-1"></i></a>
+                <a href="https://lucid.blog/tnzenwa/post/1566615432#" class="social-icon m-1"><i class="icon ion-logo-twitter text-dark p-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End FOllow  Modal -->
+
+      
+
+      <div class="col-lg-8 pb-0">
+
+        <!-- Beginning of Navbar -->
+        <div class="container-fluid p-0 m-0 mb-5 d-flex justify-content-between">
+          <a class="d-lg-none" id="sidebarToggle"><i class="icon ion-md-list" style="font-size: 1.8em"></i></a>
+          <div class="dropdown" id="lucid-dropdown">
+            <a class="nav-link dropdown-toggle pt-1" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="./Lucid Post_files/lucid-logo.png" alt="The Lucid Logo" class="img-fluid" width="40px">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://lucid.blog/login">Login</a>
+                          </div>
+          </div>
+        </div>
+        <!-- End of Navbar -->
+
+        <!-- Beginning of Post Content -->
+        <!-- Beginning of Post Content -->
+<div class="post-content">
+    <div class="post-content-body">
+        <p class="post-date">
+        <a href="https://lucid.blog/tnzenwa/home" class="text-secondary"> Home </a> /
+        <a href="https://lucid.blog/tnzenwa/home" class="text-secondary"> Blog </a> / <span class="text-muted">What I have done so far on Lucid based on HTML</span></p>
+        <cite class="post-body">
+            Published on 24 Aug 2019 
+        </cite>
+        <h3 class="post-title mb-1">
+         What I have done so far on Lucid based on HTML
+        </h3>
+
+        <div class="blog-content">
+            <p>It's not been an easy road this far. Sleepless night and willingness to succeed in this program has been the major driving force for me. From someone who doesn't know anything about coding to someone who is learning precept upon precept.</p>
+<p>The HTML task no be here o. I had to watch tutorial video from Codepikin to be able to right this one. At least I did myself, there is a joy that comes from doing things yourself .<img src="./Lucid Post_files/img-0yxzobxmso.png" alt=""></p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<!-- End of Post Content -->
+        <div class="overlay"></div>
+      </div>
+
+  </section>
+
+  <script type="text/javascript" async="" src="./Lucid Post_files/analytics.js.download"></script><script src="./Lucid Post_files/jquery-3.3.1.slim.min.js.download" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="./Lucid Post_files/popper.min.js.download" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="./Lucid Post_files/bootstrap.min.js.download" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    const anchor = window.location.hash;
+    $(`a[href="${anchor}"]`).tab('show')
+  </script>
+  <script>
+    const pageUrl = window.location.href
+    if (pageUrl.includes('followers')) {
+      $('#follow-tabs a[href="#followers"]').tab('show')
+    } else(
+      $('#follow-tabs a[href="#following"]').tab('show')
+    )
+    // $(`a[href="${anchor}"]`).tab('show')
+  </script>
+  <script>
+    function changeUrl(e) {
+      history.pushState(null, null, `/${document.getElementById("username").value+'/'+e}`)
+    }
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('#sidebarDismiss,.overlay, [data-toggle="modal"]').on('click', function() {
+        // hide sidebar
+        $('#sidebar').removeClass('active-sidebar');
+        // hide overlay
+        $('.overlay').removeClass('active');
+      });
+/*       $('[data-toggle="modal"]').on('click', function() {
+        // hide sidebar
+        $('#sidebar').addClass('d-none');
+        // hide overlay
+        $('.overlay').removeClass('active');
+      }); */
+      $('#sidebarToggle').on('click', function() {
+        // open sidebar
+        $('#sidebar').addClass('active-sidebar');
+        // fade in the overlay
+        $('.overlay').addClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+  <script async="" src="./Lucid Post_files/js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-28315089-7');
+  </script>
+
+
+
+</body></html>
